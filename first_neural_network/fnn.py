@@ -33,6 +33,11 @@ class Neural_Network(object):
 
         return yHat
 
+    # declare as static if you are not using the object
+    # (self) inside the method.
+    # i.e.you really don't care about the object
+    # that your method is bound to.
+    @staticmethod
     def sigmoid(z):
         '''apply sigmoid activation
         pass in a scalar/vector/matrix
@@ -62,9 +67,9 @@ def main():
     y = y / 100
     # print(y / 100)
 
-    FNN = Neural_Network()
+    fnn = Neural_Network()
 
-    yHat = FNN.forward(X)
+    yHat = fnn.forward(X)
 
     print(yHat)
 
